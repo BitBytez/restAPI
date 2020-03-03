@@ -13,8 +13,6 @@ class ImageUpload(Resource):
     def post(self):
         files = request.files.getlist('image')
         for file in files:
-            if 'image' not in file:
-                return {'Message':'No image key in the request'}, 400
             if file.filename == '':
                 return {'Message':'No file uploaded'}, 400
             file.save(os.path.join('./imgs/', file.filename))
@@ -23,7 +21,7 @@ class ImageUpload(Resource):
 class VideoUpload(Resource):
     def post(self):
         file = request.files
-        if 'image' not in file:
+        if 'video' not in file:
             return {'Message':'No video key in the request'}, 400
         if file.filename == '':
             return {'Message':'No file uploaded'}, 400
