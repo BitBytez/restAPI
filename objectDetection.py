@@ -5,11 +5,11 @@ img = cv2.imread('./imgs/cars.jpeg')
 (H,W) = img.shape[:2]
 # Reading Labels
 labels = []
-with open('labels.txt','r') as file:
+with open('./cfg/labels.txt','r') as file:
     text = file.read()
     labels = text.strip().split('\n')
 
-net = cv2.dnn.readNetFromDarknet('./config.cfg', 'yolov3.weights')
+net = cv2.dnn.readNetFromDarknet('./cfg/config.cfg', './cfg/yolov3.weights')
 out_layers = [net.getLayerNames()[i[0]-1] for i in net.getUnconnectedOutLayers()]
 
 blob = cv2.dnn.blobFromImage(img, 1/255.0 , (416,416) , swapRB = True)
