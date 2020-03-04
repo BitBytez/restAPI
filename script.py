@@ -66,7 +66,9 @@ def fun2(path):
         else:
             outs['objects'] += 1
         print(labels[q])
-
+    cv2.imshow("image", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
     return outs
 
 
@@ -102,4 +104,4 @@ api.add_resource(ImageUpload, '/image')
 api.add_resource(VideoUpload, '/video')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
