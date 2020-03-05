@@ -4,7 +4,7 @@ Mini Project by Ciphense, Cognitive Intelligence.
 
 REST API created on retrieving data by Image processing(with openCV) and Image detection(with help of You Only Look Once)
 
-# Installation (Only for Ciphense Team)
+# Installation _(Only for Ciphense Team)_
 Please make sure you have required modules before proceeding
 
 - Flask
@@ -28,15 +28,24 @@ Paste yolov3.weights in *restAPI/cfg/*
 
 ### Task 1
 
-Run *restAPI/server.py*
 Download a image which contains persons, animals adn few objects in it. 
+```bat
+    cd ~/Desktop/restAPI
+    python server.py
+```
+open new terminal <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
 ```bat
     curl -F "image=@/path/to/downloaded/image" 127.0.0.1:5000/getImageDetails
 ```
 
 ### Task 2
-Run *restAPI/server.py*
+
 Download a set of images which contains persons
+```bat
+    cd ~/Desktop/restAPI
+    python server.py
+```
+open new terminal <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
 ```bat
     curl -F "image=@/path/to/downloaded/image1" -F "image=@/path/to/downloaded/image2" 127.0.0.1:5000/createCollage > myOutputCollage.jpg
 ```
@@ -73,3 +82,5 @@ Download a set of images which contains persons
     ├── face.xml
     └── prof.xml
 ```
+
+
