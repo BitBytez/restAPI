@@ -13,7 +13,7 @@ Please make sure you have required modules before proceeding
 - numpy
 
 Clone the repository and download weights from YOLO
-```bash
+```bat
     cd ~/Desktop
     git clone https://github.com/BitBytez/restAPI
     wget https://pjreddie.com/media/files/yolov3.weights
@@ -30,14 +30,14 @@ Paste yolov3.weights in *restAPI/cfg/*
 
 Run *restAPI/server.py*
 Download a image which contains persons, animals adn few objects in it. 
-```bash
+```bat
     curl -F "image=@/path/to/downloaded/image" 127.0.0.1:5000/getImageDetails
 ```
 
 ### Task 2
 Run *restAPI/server.py*
 Download a set of images which contains persons
-```bash
+```bat
     curl -F "image=@/path/to/downloaded/image1" -F "image=@/path/to/downloaded/image2" 127.0.0.1:5000/createCollage > myOutputCollage.jpg
 ```
 
