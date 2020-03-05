@@ -4,37 +4,49 @@ Mini Project by Ciphense, Cognitive Intelligence.
 
 REST API created on retrieving data by Image processing(with openCV) and Image detection(with help of You Only Look Once)
 
-# Installation (Only for Ciphense Team)
+# Installation _(Only for Ciphense Team)_
 Please make sure you have required modules before proceeding
 
 - Flask
 - flask-restful
 - openCV
 - numpy
-- matplotlib
 
 Clone the repository and download weights from YOLO
-```bash
+```bat
+    cd ~/Desktop
     git clone https://github.com/BitBytez/restAPI
-
     wget https://pjreddie.com/media/files/yolov3.weights
+    mv ~/Downloads/yolov3.weights ~/Desktop/restAPI/cfg/
+    mkdir imgs
+    mkdir collage_pics
 ```
-Paste yolov3.weights in **restAPI**/cfg/
+Paste yolov3.weights in *restAPI/cfg/*
+
 
 # Usage
 
-## Task 1
+### Task 1
 
-Run **restAPI**/server.py
 Download a image which contains persons, animals adn few objects in it. 
-```bash
+```bat
+    cd ~/Desktop/restAPI
+    python server.py
+```
+open new terminal <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
+```bat
     curl -F "image=@/path/to/downloaded/image" 127.0.0.1:5000/getImageDetails
 ```
 
-## Task 2
-Run **restAPI**/server.py
+### Task 2
+
 Download a set of images which contains persons
-```bash
+```bat
+    cd ~/Desktop/restAPI
+    python server.py
+```
+open new terminal <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
+```bat
     curl -F "image=@/path/to/downloaded/image1" -F "image=@/path/to/downloaded/image2" 127.0.0.1:5000/createCollage > myOutputCollage.jpg
 ```
 
