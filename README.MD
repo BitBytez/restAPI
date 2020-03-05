@@ -11,7 +11,6 @@ Please make sure you have required modules before proceeding
 - flask-restful
 - openCV
 - numpy
-- matplotlib
 
 Clone the repository and download weights from YOLO
 ```bash
@@ -19,20 +18,20 @@ Clone the repository and download weights from YOLO
 
     wget https://pjreddie.com/media/files/yolov3.weights
 ```
-Paste yolov3.weights in **restAPI**/cfg/
+Paste yolov3.weights in *restAPI/cfg/*
 
 # Usage
 
-## Task 1
+### Task 1
 
-Run **restAPI**/server.py
+Run *restAPI/server.py*
 Download a image which contains persons, animals adn few objects in it. 
 ```bash
     curl -F "image=@/path/to/downloaded/image" 127.0.0.1:5000/getImageDetails
 ```
 
-## Task 2
-Run **restAPI**/server.py
+### Task 2
+Run *restAPI/server.py*
 Download a set of images which contains persons
 ```bash
     curl -F "image=@/path/to/downloaded/image1" -F "image=@/path/to/downloaded/image2" 127.0.0.1:5000/createCollage > myOutputCollage.jpg
