@@ -1,11 +1,11 @@
 # REST API 
 
-### Mini Project by Ciphense, Cognitive Intelligence.
+Mini Project by Ciphense, Cognitive Intelligence.
 
-### REST API created on retrieving data by Image processing(with openCV) and Image detection(with help of You Only Look Once)
+REST API created on retrieving data by Image processing(with openCV) and Image detection(with help of You Only Look Once)
 
 # Installation (Only for Ciphense Team)
-### Please make sure you have required modules before proceeding
+Please make sure you have required modules before proceeding
 
 - Flask
 - flask-restful
@@ -13,13 +13,13 @@
 - numpy
 - matplotlib
 
-### Clone the repository and download weights from YOLO
+Clone the repository and download weights from YOLO
 ```bash
     git clone https://github.com/BitBytez/restAPI
 
     wget https://pjreddie.com/media/files/yolov3.weights
 ```
-### Paste yolov3.weights in **restAPI**/cfg/
+Paste yolov3.weights in **restAPI**/cfg/
 
 # Usage
 
