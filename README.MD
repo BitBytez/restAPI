@@ -14,11 +14,15 @@ Please make sure you have required modules before proceeding
 
 Clone the repository and download weights from YOLO
 ```bash
+    cd ~/Desktop
     git clone https://github.com/BitBytez/restAPI
-
     wget https://pjreddie.com/media/files/yolov3.weights
+    mv ~/Downloads/yolov3.weights ~/Desktop/restAPI/cfg/
+    mkdir imgs
+    mkdir collage_pics
 ```
 Paste yolov3.weights in *restAPI/cfg/*
+
 
 # Usage
 
